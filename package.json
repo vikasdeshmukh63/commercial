@@ -13,7 +13,8 @@
     "install-all": "npm install && cd client && npm install",
     "setup": "node setup.js",
     "quick-start": "node start.js",
-    "heroku-postbuild": "npm run install-client && npm run build"
+    "heroku-postbuild": "npm run install-client && npm run build",
+    "render-postbuild": "npm run install-client && npm run build"
   },
   "dependencies": {
     "express": "^4.18.2",
