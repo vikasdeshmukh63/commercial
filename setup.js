@@ -13,19 +13,19 @@ const DRSite = require("./models/DRSite");
 const sampleUsers = [
   {
     name: "Admin User",
-    email: "admin@kpdcl.com",
+    email: "admin@commertial.com",
     password: "admin123",
     role: "Admin",
   },
   {
     name: "Partner User",
-    email: "partner@kpdcl.com",
+    email: "partner@commertial.com",
     password: "partner123",
     role: "Partner",
   },
   {
     name: "Customer User",
-    email: "customer@kpdcl.com",
+    email: "customer@commertial.com",
     password: "customer123",
     role: "Customer",
   },
@@ -33,7 +33,7 @@ const sampleUsers = [
 
 const sampleSummary = {
   customerName: "Sample Customer Corp",
-  partnerName: "KPDCL Partners",
+  partnerName: "Partners",
   date: new Date(),
   oppId: "OPP-2024-001",
   status: "Draft",
@@ -310,9 +310,9 @@ async function setupDatabase() {
 
     console.log("\n✅ Database setup completed successfully!");
     console.log("\n📋 Sample Login Credentials:");
-    console.log("Admin: admin@kpdcl.com / admin123");
-    console.log("Partner: partner@kpdcl.com / partner123");
-    console.log("Customer: customer@kpdcl.com / customer123");
+    console.log("Admin: admin@commercial.com / admin123");
+    console.log("Partner: partner@commercial.com / partner123");
+    console.log("Customer: customer@commercial.com / customer123");
     console.log("\n🚀 You can now start the application with: npm run dev");
   } catch (error) {
     console.error("❌ Error setting up database:", error);

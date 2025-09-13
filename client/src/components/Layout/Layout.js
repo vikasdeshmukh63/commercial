@@ -91,9 +91,7 @@ function Layout() {
   const drawer = (
     <div>
       <Toolbar>
-        <Typography variant="h6" noWrap component="div">
-          KPDCL Commercial
-        </Typography>
+        <img src="./image.jpg" style={{width:"80px",height:"auto"}}/>
       </Toolbar>
       <Divider />
       <List>
@@ -128,7 +126,7 @@ function Layout() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
-            {currentSummary ? `${currentSummary.customerName} - ${currentSummary.oppId}` : "KPDCL Commercial Management"}
+            {currentSummary ? `${currentSummary.customerName} - ${currentSummary.oppId}` : "Commercial Management"}
           </Typography>
           <IconButton
             size="large"

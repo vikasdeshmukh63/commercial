@@ -141,7 +141,7 @@ router.get('/:oppId/excel', protect, canView, async (req, res) => {
     }
 
     // Generate filename
-    const filename = `KPDCL_${oppId}_${Date.now()}.xlsx`;
+    const filename = `${oppId}_${Date.now()}.xlsx`;
 
     // Set headers
     res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
@@ -182,13 +182,13 @@ router.get('/:oppId/pdf', protect, canView, async (req, res) => {
     
     // Set headers
     res.setHeader('Content-Type', 'application/pdf');
-    res.setHeader('Content-Disposition', `attachment; filename=KPDCL_${oppId}_${Date.now()}.pdf`);
+    res.setHeader('Content-Disposition', `attachment; filename=${oppId}_${Date.now()}.pdf`);
 
     // Pipe PDF to response
     doc.pipe(res);
 
     // Add content
-    doc.fontSize(20).text('KPDCL Commercial Report', 50, 50);
+    doc.fontSize(20).text('Commercial Report', 50, 50);
     doc.fontSize(12);
 
     // Summary section

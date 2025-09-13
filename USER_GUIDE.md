@@ -1,4 +1,4 @@
-# KPDCL Commercial Management System - User Guide
+# Commercial Management System - User Guide
 
 ## 🎯 Application Flow & Usage Guide
 
@@ -35,9 +35,9 @@ Use these sample credentials or create your own account:
 
 | Role | Email | Password | Access Level |
 |------|-------|----------|--------------|
-| **Admin** | admin@kpdcl.com | admin123 | Full access (all modules) |
-| **Partner** | partner@kpdcl.com | partner123 | Edit Commercial, DC, DR, Sizing |
-| **Customer** | customer@kpdcl.com | customer123 | Read-only access |
+| **Admin** | admin@commercial.com | admin123 | Full access (all modules) |
+| **Partner** | partner@commercial.com | partner123 | Edit Commercial, DC, DR, Sizing |
+| **Customer** | customer@commercial.com | customer123 | Read-only access |
 
 ---
 
@@ -139,7 +139,7 @@ Use these sample credentials or create your own account:
 1. **Click "New Project" button**
 2. **Fill required information**:
    - Customer Name (e.g., "ABC Corporation")
-   - Partner Name (e.g., "KPDCL Partners")
+   - Partner Name (e.g., "Partners")
    - Opportunity ID (unique, e.g., "OPP-2024-001")
    - Date (project start date)
    - Status (Draft/In Progress/Completed/Cancelled)
@@ -368,7 +368,7 @@ Activity: Security Configuration
 ```
 1. Login as Admin/Partner
 2. Go to Summary → Click "New Project"
-3. Fill: Customer="XYZ Corp", Partner="KPDCL", OppID="OPP-2024-002"
+3. Fill: Customer="XYZ Corp", Partner="partner", OppID="OPP-2024-002"
 4. Go to Commercial → Add pricing items
 5. Configure DC and DR requirements
 6. Set up RACI matrix

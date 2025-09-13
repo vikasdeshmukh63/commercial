@@ -1,4 +1,4 @@
-# KPDCL Commercial App - Deployment Guide
+#  Commercial App - Deployment Guide
 
 ## 🚀 Production Deployment
 
@@ -30,7 +30,7 @@ sudo apt install nginx -y
 ```bash
 # Clone repository
 git clone <your-repo-url>
-cd kpdcl-commercial-app
+cd -commercial-app
 
 # Install dependencies
 npm run install-all
@@ -49,7 +49,7 @@ nano .env
 ```env
 NODE_ENV=production
 PORT=5000
-MONGODB_URI=mongodb://localhost:27017/kpdcl_commercial_prod
+MONGODB_URI=mongodb://localhost:27017/commercial_prod
 JWT_SECRET=your_super_secure_jwt_secret_key_here
 JWT_EXPIRE=30d
 ```
@@ -76,7 +76,7 @@ Create `ecosystem.config.js`:
 ```javascript
 module.exports = {
   apps: [{
-    name: 'kpdcl-commercial',
+    name: 'commercial',
     script: 'server.js',
     instances: 'max',
     exec_mode: 'cluster',
@@ -100,7 +100,7 @@ pm2 startup
 
 ### 6. Nginx Configuration
 
-Create `/etc/nginx/sites-available/kpdcl-commercial`:
+Create `/etc/nginx/sites-available/commercial`:
 ```nginx
 server {
     listen 80;
@@ -108,7 +108,7 @@ server {
 
     # Serve React app
     location / {
-        root /path/to/kpdcl-commercial-app/client/build;
+        root /path/to/commercial-app/client/build;
         index index.html index.htm;
         try_files $uri $uri/ /index.html;
     }
@@ -128,7 +128,7 @@ server {
 
     # Static files
     location /static {
-        root /path/to/kpdcl-commercial-app/client/build;
+        root /path/to/commercial-app/client/build;
         expires 1y;
         add_header Cache-Control "public, immutable";
     }
@@ -137,7 +137,7 @@ server {
 
 Enable site:
 ```bash
-sudo ln -s /etc/nginx/sites-available/kpdcl-commercial /etc/nginx/sites-enabled/
+sudo ln -s /etc/nginx/sites-available/commercial /etc/nginx/sites-enabled/
 sudo nginx -t
 sudo systemctl restart nginx
 ```
@@ -200,7 +200,7 @@ services:
       - "5000:5000"
     environment:
       - NODE_ENV=production
-      - MONGODB_URI=mongodb://mongo:27017/kpdcl_commercial
+      - MONGODB_URI=mongodb://mongo:27017/commercial
       - JWT_SECRET=your_jwt_secret_here
     depends_on:
       - mongo
@@ -248,7 +248,7 @@ npm install -g heroku
 heroku login
 
 # Create app
-heroku create kpdcl-commercial-app
+heroku create commercial-app
 ```
 
 2. **Configure environment:**
@@ -285,13 +285,13 @@ git push heroku main
 ### PM2 Monitoring
 ```bash
 # View logs
-pm2 logs kpdcl-commercial
+pm2 logs commercial
 
 # Monitor processes
 pm2 monit
 
 # Restart app
-pm2 restart kpdcl-commercial
+pm2 restart commercial
 
 # View status
 pm2 status
@@ -302,7 +302,7 @@ pm2 status
 # Create backup script
 #!/bin/bash
 DATE=$(date +%Y%m%d_%H%M%S)
-mongodump --db kpdcl_commercial_prod --out /backups/mongodb_$DATE
+mongodump --db commercial_prod --out /backups/mongodb_$DATE
 tar -czf /backups/mongodb_$DATE.tar.gz /backups/mongodb_$DATE
 rm -rf /backups/mongodb_$DATE
 
@@ -313,7 +313,7 @@ rm -rf /backups/mongodb_$DATE
 ### Log Rotation
 ```bash
 # Configure logrotate
-sudo nano /etc/logrotate.d/kpdcl-commercial
+sudo nano /etc/logrotate.d/commercial
 
 /home/ubuntu/.pm2/logs/*.log {
     daily
@@ -403,4 +403,4 @@ sudo systemctl reload nginx
 - Use database indexing
 - Implement caching layers
 
-This deployment guide ensures your KPDCL Commercial Management System runs reliably in production with proper security, monitoring, and scalability considerations.
+This deployment guide ensures your Commercial Management System runs reliably in production with proper security, monitoring, and scalability considerations.

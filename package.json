@@ -1,7 +1,7 @@
 {
-  "name": "kpdcl-commercial-app",
+  "name": "commercial-app",
   "version": "1.0.0",
-  "description": "KPDCL Commercial Management System",
+  "description": "Commercial Management System",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -31,6 +31,6 @@
     "nodemon": "^3.0.1"
   },
   "keywords": ["mern", "commercial", "management"],
-  "author": "KPDCL Team",
+  "author": "Team",
   "license": "MIT"
 }

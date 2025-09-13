@@ -1,4 +1,4 @@
-# KPDCL Commercial System - Step-by-Step Tutorial
+# Commercial System - Step-by-Step Tutorial
 
 ## 🎯 Complete Walkthrough: Creating Your First Project
 
@@ -17,9 +17,9 @@ This tutorial will guide you through creating a complete project from start to f
 2. **Access the application**: http://localhost:3000
 
 3. **Sample login credentials**:
-   - **Admin**: admin@kpdcl.com / admin123
-   - **Partner**: partner@kpdcl.com / partner123
-   - **Customer**: customer@kpdcl.com / customer123
+   - **Admin**: admin@commercial.com / admin123
+   - **Partner**: partner@commercial.com / partner123
+   - **Customer**: customer@commercial.com / customer123
 
 ---
 
@@ -29,7 +29,7 @@ This tutorial will guide you through creating a complete project from start to f
 1. **Open browser** → Go to http://localhost:3000
 2. **You'll see the login page**
 3. **Enter credentials**:
-   - Email: `admin@kpdcl.com`
+   - Email: `admin@commercial.com`
    - Password: `admin123`
 4. **Click "Sign In"**
 5. **You'll be redirected to the Dashboard**
@@ -51,7 +51,7 @@ This tutorial will guide you through creating a complete project from start to f
 3. **Fill in the project details**:
    ```
    Customer Name: ABC Corporation
-   Partner Name: KPDCL Solutions
+   Partner Name: Solutions
    Opportunity ID: OPP-2024-ABC
    Date: [Today's date]
    Status: Draft
@@ -121,20 +121,20 @@ One Time Cost: 0
 **Switch to Partner View**:
 1. **Logout** (click user avatar → Logout)
 2. **Login as Partner**:
-   - Email: `partner@kpdcl.com`
+   - Email: `partner@commercial.com`
    - Password: `partner123`
 3. **Navigate to Commercial module**
 4. **Notice**: You can edit items but cannot delete the project
 
 **Switch to Customer View**:
 1. **Logout and login as Customer**:
-   - Email: `customer@kpdcl.com`
+   - Email: `customer@commercial.com`
    - Password: `customer123`
 2. **Navigate to Commercial module**
 3. **Notice**: Everything is read-only, no "Add Item" or edit buttons
 
 ### Step 7: Export Your Project Report
-1. **Login back as Admin** (admin@kpdcl.com / admin123)
+1. **Login back as Admin** (admin@commercial.com / admin123)
 2. **Go to Commercial module**
 3. **Select your project** (OPP-2024-ABC)
 4. **Click "Export" button**
@@ -224,7 +224,7 @@ One Time Cost: 0
 
 ## 🎉 Congratulations!
 
-You've successfully completed the KPDCL Commercial System tutorial! You now know how to:
+You've successfully completed the Commercial System tutorial! You now know how to:
 
 - ✅ Create and manage projects
 - ✅ Handle commercial pricing

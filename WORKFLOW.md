@@ -1,10 +1,10 @@
-# KPDCL Commercial Management System - Workflow Diagram
+# Commercial Management System - Workflow Diagram
 
 ## 🔄 Complete Application Flow
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                           KPDCL COMMERCIAL SYSTEM                          │
+│                           COMMERCIAL SYSTEM                                 │
 └─────────────────────────────────────────────────────────────────────────────┘
 
 ┌─────────────┐    ┌─────────────┐    ┌─────────────┐

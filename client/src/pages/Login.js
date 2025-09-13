@@ -113,7 +113,7 @@ function Login() {
 
           <TabPanel value={tabValue} index={0}>
             <Typography component="h1" variant="h4" align="center" gutterBottom>
-              KPDCL Commercial
+              Commercial
             </Typography>
             <Typography variant="h6" align="center" color="textSecondary" gutterBottom>
               Sign in to your account

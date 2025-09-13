@@ -1,6 +1,6 @@
-# KPDCL Commercial Management System
+# Commercial Management System
 
-A comprehensive MERN stack web application for managing commercial proposals, infrastructure sizing, and project tracking. This application converts the Excel-based KPDCL Commercial workflow into a modern web-based system with role-based access control.
+A comprehensive MERN stack web application for managing commercial proposals, infrastructure sizing, and project tracking. This application converts the Excel-based Commercial workflow into a modern web-based system with role-based access control.
 
 ## Features
 
@@ -99,7 +99,7 @@ A comprehensive MERN stack web application for managing commercial proposals, in
    ```env
    NODE_ENV=development
    PORT=5000
-   MONGODB_URI=mongodb://localhost:27017/kpdcl_commercial
+   MONGODB_URI=mongodb://localhost:27017/commercial
    JWT_SECRET=your_jwt_secret_key_here_change_in_production
    JWT_EXPIRE=30d
    ```

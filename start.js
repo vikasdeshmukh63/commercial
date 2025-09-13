@@ -4,7 +4,7 @@ const { spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-console.log('🚀 Starting KPDCL Commercial Management System...\n');
+console.log('🚀 Starting Commercial Management System...\n');
 
 // Check if .env files exist
 const rootEnv = path.join(__dirname, '.env');
@@ -16,7 +16,7 @@ if (!fs.existsSync(rootEnv)) {
   console.log(`
 NODE_ENV=development
 PORT=5000
-MONGODB_URI=mongodb://localhost:27017/kpdcl_commercial
+MONGODB_URI=mongodb://localhost:27017/commercial
 JWT_SECRET=your_jwt_secret_key_here_change_in_production
 JWT_EXPIRE=30d
   `);
@@ -60,9 +60,9 @@ function startApplication() {
   console.log('Backend: http://localhost:5000');
   console.log('Frontend: http://localhost:3000');
   console.log('\n📋 Sample Login Credentials:');
-  console.log('Admin: admin@kpdcl.com / admin123');
-  console.log('Partner: partner@kpdcl.com / partner123');
-  console.log('Customer: customer@kpdcl.com / customer123');
+  console.log('Admin: admin@commercial.com / admin123');
+  console.log('Partner: partner@commercial.com / partner123');
+  console.log('Customer: customer@commercial.com / customer123');
   console.log('\n⚠️  Make sure MongoDB is running before proceeding!');
   console.log('💡 Run "npm run setup" first if this is your first time.\n');
   

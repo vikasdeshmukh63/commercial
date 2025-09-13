@@ -1,4 +1,4 @@
-# KPDCL Commercial App - Quick Start Guide
+# Commercial App - Quick Start Guide
 
 ## 🚀 Get Started in 5 Minutes
 
@@ -11,7 +11,7 @@
 ```bash
 # Clone the repository
 git clone <repository-url>
-cd kpdcl-commercial-app
+cd commercial-app
 
 # Install all dependencies (backend + frontend)
 npm run install-all
@@ -22,7 +22,7 @@ Create `.env` file in root directory:
 ```env
 NODE_ENV=development
 PORT=5000
-MONGODB_URI=mongodb://localhost:27017/kpdcl_commercial
+MONGODB_URI=mongodb://localhost:27017/commercial
 JWT_SECRET=your_jwt_secret_key_here_change_in_production
 JWT_EXPIRE=30d
 ```
@@ -58,9 +58,9 @@ Use these sample credentials:
 
 | Role | Email | Password |
 |------|-------|----------|
-| Admin | admin@kpdcl.com | admin123 |
-| Partner | partner@kpdcl.com | partner123 |
-| Customer | customer@kpdcl.com | customer123 |
+| Admin | admin@commercial.com | admin123 |
+| Partner | partner@commercial.com | partner123 |
+| Customer | customer@commercial.com | customer123 |
 
 ## 📋 What You Can Do
 
@@ -233,6 +233,6 @@ npm run install-all
 
 ## 🎉 Success!
 
-You now have a fully functional KPDCL Commercial Management System running locally. Start by logging in with the sample credentials and exploring the different modules.
+You now have a fully functional Commercial Management System running locally. Start by logging in with the sample credentials and exploring the different modules.
 
 Happy coding! 🚀
