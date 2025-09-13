@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "setup": "node setup.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon server.js",
+    "client": "cd client && npm start",
+    "build": "cd client && npm run build",
+    "install-all": "npm install && cd client && npm install",
+    "heroku-postbuild": "cd client && npm install && npm run build"
+  }
+}
