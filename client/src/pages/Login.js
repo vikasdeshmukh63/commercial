@@ -18,6 +18,7 @@ import {
   MenuItem,
 } from '@mui/material';
 import { login, register, reset } from '../store/slices/authSlice';
+import Footer from '../components/Footer/Footer';
 
 function TabPanel({ children, value, index, ...other }) {
   return (
@@ -94,15 +95,16 @@ function Login() {
   };
 
   return (
-    <Container component="main" maxWidth="sm">
-      <Box
-        sx={{
-          marginTop: 8,
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-        }}
-      >
+    <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+      <Container component="main" maxWidth="sm" sx={{ flexGrow: 1 }}>
+        <Box
+          sx={{
+            marginTop: 8,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+          }}
+        >
         <Paper elevation={3} sx={{ width: '100%', mt: 3 }}>
           <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
             <Tabs value={tabValue} onChange={handleTabChange} aria-label="login register tabs">
@@ -254,8 +256,10 @@ function Login() {
             </Box>
           </TabPanel>
         </Paper>
-      </Box>
-    </Container>
+        </Box>
+      </Container>
+      <Footer />
+    </Box>
   );
 }
 

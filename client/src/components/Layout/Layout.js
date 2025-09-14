@@ -35,6 +35,7 @@ import {
   Logout,
 } from "@mui/icons-material";
 import { logout } from "../../store/slices/authSlice";
+import Footer from "../Footer/Footer";
 
 const drawerWidth = 240;
 
@@ -91,11 +92,15 @@ function Layout() {
 
   const drawer = (
     <div>
-      <Toolbar sx={{ display: "flex",gap:"10px" }}>
-        <img src="./image.jpg" style={{ width: "50px", height: "auto" }} />
+      <Toolbar sx={{ display: "flex", gap: "10px" }}>
+        <img src="/image.jpg" alt="Logo" style={{ width: "40px", height: "40px" }} />
         <Stack>
-          <Typography sx={{color:"blue", fontSize:"20px",fontWeight:600}}>Presales</Typography>
-          <Typography sx={{color:"#1976d2", fontSize:"12px",fontWeight:600}}>Team Solution</Typography>
+          <Typography sx={{ color: "#1976d2", fontSize: "18px", fontWeight: 600 }}>
+        Presales
+          </Typography>
+          <Typography sx={{ color: "#1976d2", fontSize: "11px", fontWeight: 500 }}>
+            Solution Team
+          </Typography>
         </Stack>
       </Toolbar>
       <Divider />
@@ -202,9 +207,21 @@ function Layout() {
           {drawer}
         </Drawer>
       </Box>
-      <Box component="main" sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}>
+      <Box 
+        component="main" 
+        sx={{ 
+          flexGrow: 1, 
+          display: 'flex', 
+          flexDirection: 'column',
+          minHeight: '100vh',
+          width: { sm: `calc(100% - ${drawerWidth}px)` } 
+        }}
+      >
         <Toolbar />
-        <Outlet />
+        <Box sx={{ flexGrow: 1, p: 3 }}>
+          <Outlet />
+        </Box>
+        <Footer />
       </Box>
     </Box>
   );
