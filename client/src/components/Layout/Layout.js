@@ -18,6 +18,7 @@ import {
   MenuItem,
   Avatar,
   Divider,
+  Stack,
 } from "@mui/material";
 import {
   Menu as MenuIcon,
@@ -90,8 +91,12 @@ function Layout() {
 
   const drawer = (
     <div>
-      <Toolbar>
-        <img src="./image.jpg" style={{width:"80px",height:"auto"}}/>
+      <Toolbar sx={{ display: "flex",gap:"10px" }}>
+        <img src="./image.jpg" style={{ width: "50px", height: "auto" }} />
+        <Stack>
+          <Typography sx={{color:"blue", fontSize:"20px",fontWeight:600}}>Presales</Typography>
+          <Typography sx={{color:"#1976d2", fontSize:"12px",fontWeight:600}}>Team Solution</Typography>
+        </Stack>
       </Toolbar>
       <Divider />
       <List>
